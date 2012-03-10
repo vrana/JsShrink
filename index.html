@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JsShrink</title>
+<body>
+
+<h1>JsShrink</h1>
+<script type="text/javascript" src="https://raw.github.com/vrana/JsShrink/master/jsShrink.js"></script>
+<script type="text/javascript">
+function jsShrinkHtml() {
+	var input = document.getElementById('jsShrink').value.replace('\r', '');
+	var shrinked = jsShrink(input);
+	document.getElementById('jsShrinkOutput').value = shrinked;
+	document.getElementById('jsShrinkLength').innerHTML = input.length + ' chars to ' + shrinked.length + ' chars';
+}
+</script>
+<p><textarea id="jsShrink" rows="20" cols="80">var a = 1; // simple assignment
+/*
+multiline
+comment
+*/
+'double'  +  'space';
+var b = a++ + +2;
+var s = 'McDonald\'s hamburgers';
+s = "Multiline text \
+with double  space";
+var re = / [/] /g;
+var num = 1 /* */ / 2 / 3;
+var nan = 1 / /.*/ / 2;
+nan = /.*/ / 2 / 3;
+
+function (areturn) {
+	areturn / 2 / 2;
+	return a;
+}
+</textarea></p>
+<p><input type="button" value="JsShrink" onclick="jsShrinkHtml();">
+<span id="jsShrinkLength"></span>
+<p><textarea id="jsShrinkOutput" rows="20" cols="80"></textarea>
+<p><a href="https://github.com/vrana/JsShrink/">Repository</a>
