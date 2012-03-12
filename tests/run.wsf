@@ -1,0 +1,16 @@
+<job>
+<script language="JScript" src="../jsShrink.js"></script>
+<script language="JScript">
+var fso = new ActiveXObject('Scripting.FileSystemObject');
+var dir = WScript.ScriptFullName.replace(/[^\\]*$/, '');
+
+for (var filenames = new Enumerator(fso.GetFolder(dir + 'input').Files); !filenames.atEnd(); filenames.moveNext()) {
+	var filename = filenames.item().Name;
+	var input = fso.OpenTextFile(dir + 'input\\' + filename, 1).readAll();
+	var expect = fso.OpenTextFile(dir + 'expect\\' + filename, 1).readAll();
+	if (jsShrink(input) !== expect) {
+		WScript.Echo(filename + ' failed.');
+	}
+}
+</script>
+</job>
