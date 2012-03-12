@@ -1,6 +1,7 @@
 /** Remove spaces and comments from JavaScript code
 * @param string code with commands terminated by semicolon
 * @return string shrinked code
+* @link http://vrana.github.com/JsShrink/
 * @author Jakub Vrana, http://www.vrana.cz/
 * @copyright 2007 Jakub Vrana
 * @license http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
