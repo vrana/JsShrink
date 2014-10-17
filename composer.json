@@ -1,0 +1,27 @@
+{
+    "name": "vrana/jsshrink",
+    "description": "Remove spaces and comments from JavaScript code (available in PHP and JavaScript).",
+    "homepage": "https://github.com/vrana/JsShrink",
+    "authors": [
+        {
+            "name": "Jakub Vrána",
+            "homepage": "http://www.vrana.cz"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "jsShrink.js"
+        ]
+    },
+    "license": [
+        "Apache-2.0",
+        "GPL-2.0"
+    ],
+    "extra": {
+        "component": {
+            "scripts": [
+                "jsShrink.js"
+            ]
+        }
+    }
+}
